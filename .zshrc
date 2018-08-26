@@ -3,6 +3,8 @@ export ZSH="/home/fynn/.oh-my-zsh"
 export DOCKER_HOST=tcp://0.0.0.0:2375
 
 plugins=(
+  docker
+  docker-compose
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
