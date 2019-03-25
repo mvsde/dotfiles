@@ -5,8 +5,8 @@ ZSH_THEME=""
 plugins=(
   docker
   docker-compose
+  npm
   osx
-  watson
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -17,6 +17,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export EDITOR='nano'
+
+alias dc=docker-compose
 
 autoload -U promptinit; promptinit
 prompt pure
