@@ -22,3 +22,7 @@ alias dc=docker-compose
 
 autoload -U promptinit; promptinit
 prompt pure
+
+function cd () {
+  builtin cd "$@" && ls -lAh
+}
