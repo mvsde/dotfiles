@@ -28,15 +28,23 @@ function touch {
   New-Item -ItemType File $args
 }
 
-# File hashes
-function md5 {
-  Get-FileHash -Algorithm MD5 $args
-}
+# Implement Unix-like rm -rf
+Remove-Item 'Alias:\rm' -Force
+function rm {
+  $additional_args = $args[1..($args.Count-1)]
 
-function sha1 {
-  Get-FileHash -Algorithm SHA1 $args
-}
-
-function sha256 {
-  Get-FileHash -Algorithm SHA256 $args
+  switch ($args[0]) {
+    "-r" {
+      Remove-Item -Recurse $additional_args
+    }
+    "-f" {
+      Remove-Item -Force $additional_args
+    }
+    "-rf" {
+      Remove-Item -Recurse -Force $additional_args
+    }
+    default {
+      Remove-Item $additional_args
+    }
+  }
 }
