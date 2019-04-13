@@ -5,6 +5,8 @@ Set-PSReadlineOption -BellStyle None
 Set-PSReadlineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit
 
 # Enhance the history
+Set-PSReadLineOption -MaximumHistoryCount 10000
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
@@ -20,3 +22,21 @@ New-Alias which Get-Command
 Import-Module PSReadLine
 Import-Module posh-git
 Import-Module pure-pwsh
+
+# Touch
+function touch {
+  New-Item -ItemType File $args
+}
+
+# File hashes
+function md5 {
+  Get-FileHash -Algorithm MD5 $args
+}
+
+function sha1 {
+  Get-FileHash -Algorithm SHA1 $args
+}
+
+function sha256 {
+  Get-FileHash -Algorithm SHA256 $args
+}
