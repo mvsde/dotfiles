@@ -6,7 +6,6 @@ plugins=(
   docker
   docker-compose
   npm
-  osx
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
