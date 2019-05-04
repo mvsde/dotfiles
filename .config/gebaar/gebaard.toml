@@ -8,8 +8,8 @@ up = "xdotool key ctrl+F9"
 left_down = ""
 right_down = ""
 down = "xdotool key ctrl+F9"
-left = "wmctrl -s 0"
-right = "wmctrl -s 1"
+left = "wmctrl -s 1"
+right = "wmctrl -s 0"
 
 [commands.swipe.four]
 left_up = ""
