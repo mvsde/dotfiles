@@ -14,16 +14,26 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-export EDITOR=nano
-
-alias dc=docker-compose
-
 autoload -U promptinit; promptinit
 prompt pure
 
+
+# Environment variables
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export EDITOR=nano
+
+
+# Aliases
+
+alias dc=docker-compose
+
+
+# Functions
+
 function cd () {
-  builtin cd "$@" && ls -lAh
+  builtin cd "$@"
+  echo ""
+  ls -lAh
 }
