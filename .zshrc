@@ -7,6 +7,7 @@ ZSH_THEME=""
 plugins=(
   docker
   docker-compose
+  git
   npm
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -21,7 +22,6 @@ prompt pure
 # Environment variables
 
 export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
 export EDITOR=nano
 
 
