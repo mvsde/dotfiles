@@ -12,7 +12,19 @@ chflags hidden <directory>
 ```
 
 
-## Apple keyboard for Linux
+## Linux
+
+### Locale settings
+
+```bash
+# Show default settings
+cat /etc/default/locale
+
+# Update default setting
+sudo update-locale LC_TIME=de_DE.UTF-8
+```
+
+### Apple keyboard for Linux
 
 ```bash
 sudo nano /etc/modprobe.d/hid_apple.conf
