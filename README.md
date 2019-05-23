@@ -1,15 +1,6 @@
 # dotfiles
 
-My collection of dotfiles and configuration files.
-
-
-## macOS
-
-### Hide directory
-
-```bash
-chflags hidden <directory>
-```
+My collection of dotfiles, configuration files, and random settings.
 
 
 ## Linux
@@ -24,7 +15,7 @@ cat /etc/default/locale
 sudo update-locale LC_TIME=de_DE.UTF-8
 ```
 
-### Apple keyboard for Linux
+### Apple keyboard
 
 ```bash
 sudo nano /etc/modprobe.d/hid_apple.conf
@@ -39,4 +30,13 @@ options hid_apple iso_layout=0
 ```bash
 sudo update-initramfs -u
 reboot
+```
+
+
+## macOS
+
+### Hide directory
+
+```bash
+chflags hidden <directory>
 ```
