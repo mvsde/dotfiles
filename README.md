@@ -40,3 +40,12 @@ reboot
 ```bash
 chflags hidden <directory>
 ```
+
+
+## Node Version Manager
+
+Build with full internationalization data:
+
+```bash
+nvm install -s VERSION --with-intl=full-icu --download=all
+```
