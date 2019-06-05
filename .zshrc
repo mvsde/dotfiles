@@ -1,8 +1,18 @@
-fpath=( "$HOME/.zfunctions" $fpath )
-
 export ZSH="/home/fynn/.oh-my-zsh"
 
-ZSH_THEME=""
+
+# Theme
+# https://github.com/denysdovhan/spaceship-prompt
+
+ZSH_THEME="spaceship"
+
+SPACESHIP_EXEC_TIME_PREFIX=""
+
+SPACESHIP_EXIT_CODE_SHOW="true"
+SPACESHIP_EXIT_CODE_SYMBOL="⨯ "
+
+
+# Plugins
 
 plugins=(
   docker
@@ -15,14 +25,11 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-autoload -U promptinit; promptinit
-prompt pure
-
 
 # Environment variables
 
-export LANG=en_US.UTF-8
-export EDITOR=nano
+export LANG="en_US.UTF-8"
+export EDITOR="nano"
 
 
 # Node Version Manager
