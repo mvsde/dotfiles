@@ -49,3 +49,12 @@ Build with full internationalization data:
 ```bash
 nvm install -s VERSION --with-intl=full-icu --download=all
 ```
+
+
+## npm
+
+Enable npm completions:
+
+```bash
+npm completion > $ZSH_CUSTOM/npm.zsh
+```
