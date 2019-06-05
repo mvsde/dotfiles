@@ -18,10 +18,18 @@ plugins=(
   docker
   docker-compose
   git
-  npm
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
+
+
+# Oh My Zsh configuration
+
+HYPHEN_INSENSITIVE="true"
+HIST_STAMPS="yyyy-mm-dd"
+
+
+# Load Oh My Zsh
 
 source $ZSH/oh-my-zsh.sh
 
