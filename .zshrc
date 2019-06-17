@@ -47,6 +47,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 
+# Tilix Terminal Emulator
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+  source /etc/profile.d/vte-2.91.sh
+fi
+
+
 # Aliases
 
 alias dc=docker-compose
