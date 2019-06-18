@@ -1,4 +1,5 @@
 [/]
+terminal-title-style='small'
 quake-specific-monitor=0
 app-title='${title}'
 use-tabs=true
