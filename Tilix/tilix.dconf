@@ -1,0 +1,21 @@
+[/]
+quake-specific-monitor=0
+app-title='${title}'
+use-tabs=true
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+foreground-color='#D3D3D7D7CFCF'
+visible-name='Default'
+palette=['#000000', '#E06C75', '#98C379', '#D19A66', '#61AFEF', '#C678DD', '#56B6C2', '#ABB2BF', '#5C6370', '#E06C75', '#98C379', '#D19A66', '#61AFEF', '#C678DD', '#56B6C2', '#FFFEFE']
+badge-color-set=false
+default-size-rows=40
+default-size-columns=140
+use-system-font=false
+cursor-colors-set=false
+highlight-colors-set=false
+use-theme-colors=false
+bold-color-set=false
+font='Fira Code 11'
+terminal-bell='none'
+background-color='#1E2127'
+badge-text=''
