@@ -57,6 +57,8 @@ fi
 # Aliases
 
 alias dc=docker-compose
+alias weather="curl wttr.in"
+alias moon="curl wttr.in/moon"
 
 
 # Functions
