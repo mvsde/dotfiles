@@ -58,3 +58,13 @@ Enable npm completions:
 ```bash
 npm completion > $ZSH_CUSTOM/npm.zsh
 ```
+
+
+## Translate Shell
+
+https://www.soimort.org/translate-shell/
+
+```bash
+wget git.io/trans -O /usr/local/bin/trans
+chmod +x /usr/local/bin/trans
+```
