@@ -65,6 +65,6 @@ npm completion > $ZSH_CUSTOM/npm.zsh
 https://www.soimort.org/translate-shell/
 
 ```bash
-wget git.io/trans -O /usr/local/bin/trans
-chmod +x /usr/local/bin/trans
+sudo wget git.io/trans -O /usr/local/bin/trans
+sudo chmod +x /usr/local/bin/trans
 ```
