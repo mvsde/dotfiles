@@ -1,3 +1,4 @@
+export PATH="/home/fynn/.deno/bin:$PATH"
 export ZSH="/home/fynn/.oh-my-zsh"
 
 
