@@ -41,6 +41,12 @@ export LANG="en_US.UTF-8"
 export EDITOR="nano"
 
 
+# mkcert for Node.js
+# https://github.com/FiloSottile/mkcert#using-the-root-with-nodejs
+
+export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
+
+
 # Node Version Manager
 
 export NVM_DIR="$HOME/.nvm"
