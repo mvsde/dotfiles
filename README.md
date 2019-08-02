@@ -2,7 +2,6 @@
 
 My collection of dotfiles, configuration files, and random settings.
 
-
 ## Linux
 
 ### Locale settings
@@ -21,7 +20,7 @@ sudo update-locale LC_TIME=de_DE.UTF-8
 sudo nano /etc/modprobe.d/hid_apple.conf
 ```
 
-```
+```conf
 options hid_apple fnmode=2
 options hid_apple swap_opt_cmd=1
 options hid_apple iso_layout=0
@@ -32,7 +31,6 @@ sudo update-initramfs -u
 reboot
 ```
 
-
 ## macOS
 
 ### Hide directory
@@ -40,7 +38,6 @@ reboot
 ```bash
 chflags hidden <directory>
 ```
-
 
 ## Node Version Manager
 
@@ -50,7 +47,6 @@ Build with full internationalization data:
 nvm install -s VERSION --with-intl=full-icu --download=all
 ```
 
-
 ## npm
 
 Enable npm completions:
@@ -58,7 +54,6 @@ Enable npm completions:
 ```bash
 npm completion > $ZSH_CUSTOM/npm.zsh
 ```
-
 
 ## Translate Shell
 
