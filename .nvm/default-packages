@@ -1,5 +1,5 @@
 @pangolin/cli
 @vue/cli
-github:indexzero/http-server
+github:http-party/http-server
 npm-check-updates
 tldr
