@@ -31,6 +31,12 @@ sudo update-initramfs -u
 reboot
 ```
 
+### Google Chrome Dark Mode
+
+```bash
+google-chrome-stable --force-dark-mode --enable-features=WebUIDarkMode
+```
+
 ## macOS
 
 ### Hide directory
