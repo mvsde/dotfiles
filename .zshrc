@@ -70,8 +70,6 @@ alias moon="curl wttr.in/moon"
 
 # Functions
 
-function cd () {
-  builtin cd "$@"
-  echo ""
-  ls -lAh
+function chpwd () {
+  la
 }
