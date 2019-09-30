@@ -52,7 +52,30 @@ google-chrome-stable --force-dark-mode --enable-features=WebUIDarkMode
 chflags hidden <directory>
 ```
 
-## Node Version Manager
+## Git
+
+### Signed commits (PGP)
+
+https://help.github.com/en/articles/generating-a-new-gpg-key
+
+```bash
+# Setup Git
+git config --global user.signingkey <id>
+git config --global commit.gpgsign true
+
+# Get public key
+gpg --armor --export <id>
+```
+
+#### VSCode
+
+```json
+{
+  "git.enableCommitSigning": true
+}
+```
+
+## nvm (Node Version Manager)
 
 Build with full internationalization data:
 
