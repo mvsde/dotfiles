@@ -1,4 +1,4 @@
 @pangolinjs/cli
-@vue/cli@next
+@vue/cli
 npm-check-updates
 serve
