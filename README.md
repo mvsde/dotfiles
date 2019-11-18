@@ -14,11 +14,13 @@ cat /etc/default/locale
 sudo update-locale LC_TIME=de_DE.UTF-8
 ```
 
-### Free up <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Up/Down</kbd> on Ubuntu
+### Free up <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Up/Down/Left/Right</kbd> on Ubuntu
 
 ```bash
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Primary>Page_Up']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Primary>Page_Down']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "[]"
 ```
 
 ### Apple keyboard
