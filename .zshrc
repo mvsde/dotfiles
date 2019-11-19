@@ -19,7 +19,6 @@ plugins=(
   docker-compose
   git
   zsh-autosuggestions
-  zsh-navigation-tools
   zsh-syntax-highlighting
 )
 
