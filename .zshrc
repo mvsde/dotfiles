@@ -6,7 +6,7 @@ export ZSH="/home/fynn/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
-SPACESHIP_EXEC_TIME_PREFIX=""
+SPACESHIP_EXEC_TIME_PREFIX="⌛ "
 
 SPACESHIP_EXIT_CODE_SHOW="true"
 SPACESHIP_EXIT_CODE_SYMBOL="⨯ "
@@ -40,12 +40,6 @@ export LANG="en_US.UTF-8"
 export EDITOR="nano"
 
 
-# mkcert for Node.js
-# https://github.com/FiloSottile/mkcert#using-the-root-with-nodejs
-
-export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
-
-
 # Node Version Manager
 
 export NVM_DIR="$HOME/.nvm"
@@ -63,9 +57,14 @@ fi
 # Aliases
 
 alias code=codium
+
 alias dc=docker-compose
+
 alias weather="curl wttr.in"
 alias moon="curl wttr.in/moon"
+
+alias c="xclip -selection clipboard"
+alias v="xclip -out"
 
 
 # Functions
