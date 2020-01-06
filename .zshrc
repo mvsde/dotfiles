@@ -6,8 +6,10 @@ export ZSH="/home/fynn/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
-SPACESHIP_EXEC_TIME_PREFIX="⌛ "
 
+# Theme settings
+
+SPACESHIP_EXEC_TIME_PREFIX="⌛ "
 SPACESHIP_EXIT_CODE_SHOW="true"
 SPACESHIP_EXIT_CODE_SYMBOL="⨯ "
 
