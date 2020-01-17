@@ -1,5 +1,6 @@
 @pangolinjs/cli
 @vue/cli
 alex
+depcheck
 npm-check-updates
 serve
