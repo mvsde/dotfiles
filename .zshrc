@@ -80,7 +80,7 @@ function update-docker-compose () {
   local dc_path="/usr/local/bin/docker-compose"
 
   curl --silent https://api.github.com/repos/docker/compose/releases/latest \
-    | grep --perl-regexp --only-matching "(?<=browser_download_url\": \").*`uname -s`-`uname -m`(?=\")" \
+    | grep --perl-regexp --only-matching "(?<=browser_download_url\": \").+/docker-compose-Linux-x86_64(?=\")" \
     | sudo wget --input-file - --output-document $dc_path
 
   sudo chmod +x $dc_path
