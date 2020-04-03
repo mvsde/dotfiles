@@ -29,6 +29,12 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "[]"
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Primary><Super>d', '<Super>d']"
 ```
 
+### Ubuntu default terminal
+
+```bash
+sudo update-alternatives --config x-terminal-emulator
+```
+
 ### Apple keyboard
 
 ```bash
