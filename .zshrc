@@ -77,11 +77,31 @@ function chpwd () {
 }
 
 function update-docker-compose () {
-  local dc_path="/usr/local/bin/docker-compose"
+  local DC_PATH="/usr/local/bin/docker-compose"
 
   curl --silent https://api.github.com/repos/docker/compose/releases/latest \
     | grep --perl-regexp --only-matching "(?<=browser_download_url\": \").+/docker-compose-Linux-x86_64(?=\")" \
-    | sudo wget --input-file - --output-document $dc_path
+    | sudo wget --input-file - --output-document $DC_PATH
 
-  sudo chmod +x $dc_path
+  sudo chmod +x $DC_PATH
+}
+
+function update-zsh-custom () {
+  local CWD=`pwd`
+
+  for PLUGIN in $ZSH/custom/plugins/*/; do
+    cd $PLUGIN
+    pwd
+    git pull
+    cd ..
+  done
+
+  for THEME in $ZSH/custom/themes/*/; do
+    cd $THEME
+    pwd
+    git pull
+    cd ..
+  done
+
+  cd $CWD
 }
