@@ -63,9 +63,6 @@ alias code=codium
 
 alias dc=docker-compose
 
-alias weather="curl wttr.in"
-alias moon="curl wttr.in/moon"
-
 alias c="xclip -selection clipboard"
 alias v="xclip -out"
 
