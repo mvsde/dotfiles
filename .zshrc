@@ -63,6 +63,8 @@ alias code=codium
 
 alias dc=docker-compose
 
+alias update-browserslist="npx browserslist@latest --update-db"
+
 alias c="xclip -selection clipboard"
 alias v="xclip -out"
 
