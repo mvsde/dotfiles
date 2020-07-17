@@ -102,3 +102,11 @@ function update-zsh-custom () {
 
   cd $CWD
 }
+
+function update-everything () {
+  sudo apt update
+  sudo apt upgrade
+  sudo snap refresh
+  flatpak update
+  update-zsh-custom
+}
