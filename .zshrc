@@ -104,9 +104,23 @@ function update-zsh-custom () {
 }
 
 function update-everything () {
+  echo "Update package list"
+  echo "================================================================================\n"
   sudo apt update
+
+  echo "\nUpgrade installed packages"
+  echo "================================================================================\n"
   sudo apt upgrade
+
+  echo "\nUpdate installed snaps"
+  echo "================================================================================\n"
   sudo snap refresh
+
+  echo "\nUpdate installed flatpaks"
+  echo "================================================================================\n"
   flatpak update
+
+  echo "\nUpdate zsh extensions"
+  echo "================================================================================\n"
   update-zsh-custom
 }
