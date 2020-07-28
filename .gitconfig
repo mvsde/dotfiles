@@ -4,5 +4,7 @@
 [core]
 	editor = nano
 	eol = lf
-	autocrlf = input
-	ignorecase = false
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
