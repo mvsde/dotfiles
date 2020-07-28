@@ -27,7 +27,6 @@ plugins=(
 
 # Oh My Zsh configuration
 
-ENABLE_CORRECTION="true"
 HYPHEN_INSENSITIVE="true"
 HIST_STAMPS="yyyy-mm-dd"
 
