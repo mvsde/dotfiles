@@ -11,3 +11,4 @@
 * [Apostrophe](https://gitlab.gnome.org/somas/apostrophe)
 * [RecApp](https://github.com/amikha1lov/RecApp)
 * [Peek](https://github.com/phw/peek)
+* [Weather](https://gitlab.gnome.org/GNOME/gnome-weather)
