@@ -12,3 +12,4 @@
 * [RecApp](https://github.com/amikha1lov/RecApp)
 * [Peek](https://github.com/phw/peek)
 * [Weather](https://gitlab.gnome.org/GNOME/gnome-weather)
+* [Piper](https://github.com/libratbag/piper/)
