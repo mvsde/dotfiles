@@ -72,6 +72,10 @@ function chpwd () {
   la
 }
 
+function suspendtime () {
+  cat /var/log/syslog | grep 'systemd-sleep' | grep "Suspending system...\|System resumed."
+}
+
 function update-docker-compose () {
   local DC_PATH="/usr/local/bin/docker-compose"
 
