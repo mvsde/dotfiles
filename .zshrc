@@ -73,7 +73,38 @@ function chpwd () {
 }
 
 function suspendtime () {
-  cat /var/log/syslog | grep 'systemd-sleep' | grep "Suspending system...\|System resumed."
+  # Similar to 'uptime' but to get the suspend time.
+
+  cat /var/log/syslog | grep "systemd-sleep" | grep "Suspending system...\|System resumed."
+}
+
+function groom-dependencies {
+  # Source: https://hugogiraudel.com/2020/11/19/managing-npm-dependencies/
+  # Requirements: jq (https://github.com/stedolan/jq)
+
+  local key=${1:-dependencies}
+
+  echo "(Maybe) unused dependencies:"
+
+  for dep in $(cat package.json | jq -cr ".$key|keys|.[]"); do
+    [[ -z "$(grep -r --exclude-dir=node_modules "'${dep}" .)" ]] && echo "  $dep";
+  done
+}
+
+function groom-components {
+  # Source: https://hugogiraudel.com/2020/11/18/looking-for-dead-code/
+
+  local root="${2:-.}"
+
+  echo "Unused components:"
+
+  for entry in "$1"/*; do
+    local name=$(basename $entry)
+
+    if [[ -z "$(grep -r "/$name'" $root)" ]]; then
+      echo "  $entry"
+    fi
+  done
 }
 
 function update-docker-compose () {
