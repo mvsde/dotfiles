@@ -2,7 +2,7 @@ export ZSH="/home/fynn/.oh-my-zsh"
 
 
 # Theme
-# https://github.com/denysdovhan/spaceship-prompt
+# https://github.com/spaceship-prompt/spaceship-prompt
 
 ZSH_THEME="spaceship"
 

@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 
-<!--
-  Reload font cache:
-  sudo fc-cache -fv
--->
-
 <fontconfig>
   <alias>
     <family>serif</family>

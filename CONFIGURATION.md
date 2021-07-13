@@ -29,12 +29,6 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "[]"
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Primary><Super>d', '<Super>d']"
 ```
 
-### Ubuntu default terminal
-
-```bash
-sudo update-alternatives --config x-terminal-emulator
-```
-
 ### Apple keyboard
 
 ```bash
@@ -87,12 +81,4 @@ gpg --armor --export <id>
 {
   "git.enableCommitSigning": true
 }
-```
-
-## npm
-
-Enable npm completions:
-
-```bash
-npm completion > $ZSH_CUSTOM/npm.zsh
 ```
