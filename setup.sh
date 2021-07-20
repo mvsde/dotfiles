@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 
-CWD=`pwd`
+REPO_DIR=~/Projects/github/mvsde/dotfiles
+APPS_DIR=~/Projects/apps
 
 
 # Tilix
@@ -9,7 +10,7 @@ CWD=`pwd`
 
 sudo apt install tilix
 sudo update-alternatives --config x-terminal-emulator
-ln --symbolic "tilix-theme.json" "~/.config/tilix/schemes/Light.json"
+ln --symbolic $REPO_DIR/tilix-theme.json ~/.config/tilix/schemes/Light.json
 
 
 # Git
@@ -19,7 +20,7 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
 sudo apt upgrade
 
-ln --symbolic ".gitconfig" "~/.gitconfig"
+ln --symbolic $REPO_DIR/.gitconfig ~/.gitconfig
 
 
 # Oh My Zsh
@@ -27,19 +28,19 @@ ln --symbolic ".gitconfig" "~/.gitconfig"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-cd "$ZSH_CUSTOM/plugins"
+cd $ZSH_CUSTOM/plugins
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
-cd "$ZSH_CUSTOM/themes"
+cd $ZSH_CUSTOM/themes
 
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git
-ln --symbolic "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+ln --symbolic $ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme $ZSH_CUSTOM/themes/spaceship.zsh-theme
 
-cd $CWD
+cd $REPO_DIR
 
-ln --symbolic ".zshrc" "~/.zshrc"
+ln --symbolic $REPO_DIR/.zshrc ~/.zshrc
 
 
 # Node.js
@@ -50,9 +51,11 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 nvm install
 npm completion > $ZSH_CUSTOM/npm.zsh
 
-ln --symbolic ".npmrc" "~/.npmrc"
-ln --symbolic ".nuxtrc" "~/.nuxtrc"
-ln --symbolic "nvm-default-packages" "$NVM_DIR/default-packages"
+# npm saves auth tokens to the config file, so this can’t be linked.
+cp $REPO_DIR/.npmrc ~/.npmrc
+
+ln --symbolic $REPO_DIR/.nuxtrc ~/.nuxtrc
+ln --symbolic $REPO_DIR/nvm-default-packages $NVM_DIR/default-packages
 
 
 ## Flatpak
@@ -109,29 +112,27 @@ docker run hello-world
 
 # Stuff and things
 
-mkdir --parents "~/Projects/apps"
-cd $_
+mkdir --parents $APPS_DIR
+cd $APPS_DIR
 
 git clone https://github.com/maoschanz/emoji-selector-for-gnome.git
-cd "emoji-selector-for-gnome"
+cd $APPS_DIR/emoji-selector-for-gnome
 ./install.sh
-cd ..
+cd $APPS_DIR
 
 git clone https://github.com/gnome-pomodoro/gnome-pomodoro.git
-cd "gnome-pomodoro"
+cd $APPS_DIR/gnome-pomodoro
 git switch gnome-3.38
 ./autogen.sh --prefix=/usr --datadir=/usr/share
 make
 sudo make install
-cd ..
+cd $APPS_DIR
 
 git clone https://github.com/JetBrains/JetBrainsMono.git
-cd "JetBrainsMono"
-ln --symbolic "fonts/variable/JetBrainsMono[wght].ttf" "~/.local/share/fonts/JetBrainsMono[wght].ttf"
-ln --symbolic "fonts/variable/JetBrainsMono-Italic[wght].ttf" "~/.local/share/fonts/JetBrainsMono-Italic[wght].ttf"
-cd ..
+ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono[wght].ttf" ~/.local/share/fonts/"JetBrainsMono[wght].ttf"
+ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono-Italic[wght].ttf" ~/.local/share/fonts/"JetBrainsMono-Italic[wght].ttf"
 
-cd $CWD
+cd $REPO_DIR
 
-ln --symbolic "ubuntu-emoji.xml" "~/.config/fontconfig/conf.d/01-emoji.conf"
+ln --symbolic $REPO_DIR/ubuntu-emoji.xml ~/.config/fontconfig/conf.d/01-emoji.conf
 sudo fc-cache -fv
