@@ -70,6 +70,7 @@ flatpak install flathub io.github.seadve.Kooha
 flatpak install flathub org.gimp.GIMP
 flatpak install flathub org.gnome.DejaDup
 flatpak install flathub org.gnome.design.Contrast
+flatpak install flathub org.gnome.design.Lorem
 flatpak install flathub org.gnome.Geary
 flatpak install flathub org.gnome.gitg
 flatpak install flathub org.gustavoperedo.FontDownloader
