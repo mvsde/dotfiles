@@ -144,3 +144,5 @@ cd $REPO_DIR
 
 ln --symbolic $REPO_DIR/ubuntu-emoji.xml ~/.config/fontconfig/conf.d/01-emoji.conf
 sudo fc-cache -fv
+
+sudo ln --symbolic $REPO_DIR/disable-usb-wakeup.sh /lib/systemd/system-sleep/disable-usb-wakeup
