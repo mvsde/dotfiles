@@ -79,7 +79,7 @@ function suspendtime () {
 }
 
 function groom-dependencies {
-  # Source: https://hugogiraudel.com/2020/11/19/managing-npm-dependencies/
+  # Source: https://kittygiraudel.com/2020/11/19/managing-npm-dependencies/
   # Requirements: jq (https://github.com/stedolan/jq)
 
   local key=${1:-dependencies}
@@ -92,7 +92,7 @@ function groom-dependencies {
 }
 
 function groom-components {
-  # Source: https://hugogiraudel.com/2020/11/18/looking-for-dead-code/
+  # Source: https://kittygiraudel.com/2020/11/18/looking-for-dead-code/
 
   local root="${2:-.}"
 
