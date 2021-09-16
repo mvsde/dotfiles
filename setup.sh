@@ -30,12 +30,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 cd $ZSH_CUSTOM/plugins
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+git clone git@github.com:zsh-users/zsh-autosuggestions.git
 
 cd $ZSH_CUSTOM/themes
 
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git
+git clone git@github.com:spaceship-prompt/spaceship-prompt.git
 ln --symbolic $ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme $ZSH_CUSTOM/themes/spaceship.zsh-theme
 
 cd $REPO_DIR
@@ -123,12 +123,12 @@ docker run hello-world
 mkdir --parents $APPS_DIR
 cd $APPS_DIR
 
-git clone https://github.com/maoschanz/emoji-selector-for-gnome.git
+git clone git@github.com:maoschanz/emoji-selector-for-gnome.git
 cd $APPS_DIR/emoji-selector-for-gnome
 ./install.sh
 cd $APPS_DIR
 
-git clone https://github.com/gnome-pomodoro/gnome-pomodoro.git
+git clone git@github.com:gnome-pomodoro/gnome-pomodoro.git
 cd $APPS_DIR/gnome-pomodoro
 git switch gnome-3.38
 ./autogen.sh --prefix=/usr --datadir=/usr/share
@@ -136,7 +136,7 @@ make
 sudo make install
 cd $APPS_DIR
 
-git clone https://github.com/JetBrains/JetBrainsMono.git
+git clone git@github.com:JetBrains/JetBrainsMono.git
 ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono[wght].ttf" ~/.local/share/fonts/"JetBrainsMono[wght].ttf"
 ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono-Italic[wght].ttf" ~/.local/share/fonts/"JetBrainsMono-Italic[wght].ttf"
 
