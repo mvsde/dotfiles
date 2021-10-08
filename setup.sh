@@ -65,6 +65,7 @@ sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install flatpak
 
+flatpak install flathub com.github.liferooter.textpieces
 flatpak install flathub com.github.maoschanz.drawing
 flatpak install flathub io.github.seadve.Kooha
 flatpak install flathub org.gimp.GIMP
