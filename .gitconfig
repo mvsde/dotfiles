@@ -2,12 +2,19 @@
 	name = Fynn Becker
 	email = post@fynn.be
 	signingkey = 4CFDFD6582321036
+
 [core]
 	editor = nano
 	eol = lf
+
 [init]
 	defaultBranch = main
+
 [commit]
 	gpgsign = true
+
 [pull]
 	rebase = true
+
+[includeIf "gitdir:~/Projects/factorial/"]
+	path = ~/Projects/factorial/.gitconfig
