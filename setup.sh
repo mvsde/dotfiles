@@ -6,19 +6,12 @@ APPS_DIR=~/Projects/apps
 
 
 # Tilix
-# https://launchpad.net/~webupd8team/+archive/ubuntu/terminix
+# https://gnunn1.github.io/tilix-web/
 
-sudo apt install tilix
-sudo update-alternatives --config x-terminal-emulator
 ln --symbolic $REPO_DIR/tilix-theme.json ~/.config/tilix/schemes/Light.json
 
 
 # Git
-# https://launchpad.net/~git-core/+archive/ubuntu/ppa
-
-sudo add-apt-repository ppa:git-core/ppa
-sudo apt update
-sudo apt upgrade
 
 ln --symbolic $REPO_DIR/.gitconfig ~/.gitconfig
 
@@ -59,11 +52,6 @@ ln --symbolic $REPO_DIR/nvm-default-packages $NVM_DIR/default-packages
 
 
 ## Flatpak
-# https://flatpak.org/setup/Ubuntu/
-
-sudo add-apt-repository ppa:alexlarsson/flatpak
-sudo apt update
-sudo apt install flatpak
 
 flatpak install flathub com.github.liferooter.textpieces
 flatpak install flathub com.github.maoschanz.drawing
@@ -86,64 +74,43 @@ flatpak install flathub us.zoom.Zoom
 # Enpass
 # https://www.enpass.io/support/kb/general/how-to-install-enpass-on-linux/
 
-sudo echo "deb https://apt.enpass.io/ stable main" > /etc/apt/sources.list.d/enpass.list
-wget -O - https://apt.enpass.io/keys/enpass-linux.key | sudo apt-key add -
-sudo apt update
-sudo apt install enpass
+# Distro-specific installation steps…
 
 
 # Docker
 # https://docs.docker.com/engine/install/ubuntu/
 
-sudo apt update
-sudo apt install \
-  apt-transport-https \
-  ca-certificates \
-  curl \
-  gnupg \
-  lsb-release
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-
-echo \
-  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-sudo apt update
-sudo apt install docker-ce docker-ce-cli containerd.io
-
-sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
-
-docker run hello-world
+# Distro-specific installation steps…
 
 
 # Stuff and things
 
 mkdir --parents $APPS_DIR
-cd $APPS_DIR
 
+# Emoji Selector
+# https://github.com/maoschanz/emoji-selector-for-gnome
+
+cd $APPS_DIR
 git clone git@github.com:maoschanz/emoji-selector-for-gnome.git
+
 cd $APPS_DIR/emoji-selector-for-gnome
 ./install.sh
-cd $APPS_DIR
 
-git clone git@github.com:gnome-pomodoro/gnome-pomodoro.git
-cd $APPS_DIR/gnome-pomodoro
-git switch gnome-3.38
-./autogen.sh --prefix=/usr --datadir=/usr/share
-make
-sudo make install
-cd $APPS_DIR
+cd $REPO_DIR
 
+
+# JetBrains Mono
+# https://github.com/JetBrains/JetBrainsMono
+
+cd $APPS_DIR
 git clone git@github.com:JetBrains/JetBrainsMono.git
 ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono[wght].ttf" ~/.local/share/fonts/"JetBrainsMono[wght].ttf"
 ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono-Italic[wght].ttf" ~/.local/share/fonts/"JetBrainsMono-Italic[wght].ttf"
-
 cd $REPO_DIR
 
 ln --symbolic $REPO_DIR/ubuntu-emoji.xml ~/.config/fontconfig/conf.d/01-emoji.conf
 sudo fc-cache -fv
+
+# Disable USB peripheral wakeup
 
 sudo ln --symbolic $REPO_DIR/disable-usb-wakeup.sh /lib/systemd/system-sleep/disable-usb-wakeup
