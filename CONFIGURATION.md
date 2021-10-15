@@ -12,7 +12,7 @@ cat /etc/default/locale
 sudo update-locale LC_TIME=de_DE.UTF-8
 ```
 
-### Ubuntu keybindings
+### GNOME keybindings
 
 #### Free up <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Arrows</kbd>
 
@@ -33,6 +33,14 @@ gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Primary><Super>d
 
 ```bash
 gsettings set org.freedesktop.ibus.panel.emoji hotkey "[]"
+```
+
+### Emoji “picker”
+
+Install [emoj](https://github.com/sindresorhus/emoj) and create a custom keyboard shortcut:
+
+```sh
+gnome-terminal -- bash -c 'source ~/.bashrc; emoj'
 ```
 
 ### Apple keyboard
