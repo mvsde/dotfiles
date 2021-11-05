@@ -113,4 +113,6 @@ sudo fc-cache -fv
 
 # Disable USB peripheral wakeup
 
-sudo ln --symbolic $REPO_DIR/disable-usb-wakeup.sh /lib/systemd/system-sleep/disable-usb-wakeup
+sudo cp $REPO_DIR/disable-usb-wakeup.service /lib/systemd/system/disable-usb-wakeup.service
+systemctl enable disable-usb-wakeup.service
+systemctl start disable-usb-wakeup.service
