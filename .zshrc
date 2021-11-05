@@ -11,7 +11,7 @@ SPACESHIP_GIT_PREFIX="· "
 SPACESHIP_DOCKER_PREFIX="· "
 SPACESHIP_EXEC_TIME_PREFIX="· "
 
-SPACESHIP_BATTERY_THRESHOLD=30
+SPACESHIP_BATTERY_THRESHOLD=40
 
 SPACESHIP_EXIT_CODE_SHOW="true"
 SPACESHIP_EXIT_CODE_SYMBOL="⨯ "
@@ -58,11 +58,7 @@ export EDITOR="nano"
 # Aliases
 
 alias dc=docker-compose
-
 alias update-browserslist="npx browserslist@latest --update-db"
-
-alias c="xclip -selection clipboard"
-alias v="xclip -out"
 
 
 # Functions
