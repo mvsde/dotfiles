@@ -74,7 +74,7 @@ function chpwd () {
 function suspendtime () {
   # Similar to 'uptime' but to get the suspend time.
 
-  cat /var/log/syslog | grep "systemd-sleep" | grep "Suspending system...\|System resumed."
+  journalctl --boot | grep systemd-sleep
 }
 
 function groom-dependencies {
