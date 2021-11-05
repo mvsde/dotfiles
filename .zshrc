@@ -32,6 +32,7 @@ plugins=(
   git
   npm
   yarn
+  z
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
