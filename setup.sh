@@ -26,14 +26,16 @@ cd $ZSH_CUSTOM/plugins
 git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
 git clone git@github.com:zsh-users/zsh-autosuggestions.git
 
-cd $ZSH_CUSTOM/themes
-
-git clone git@github.com:spaceship-prompt/spaceship-prompt.git
-ln --symbolic $ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme $ZSH_CUSTOM/themes/spaceship.zsh-theme
-
 cd $REPO_DIR
 
 ln --symbolic $REPO_DIR/.zshrc ~/.zshrc
+
+
+# Starship
+# https://starship.rs/
+
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+ln --symbolic $REPO_DIR/starship.toml ~/.config/starship.toml
 
 
 # Node.js

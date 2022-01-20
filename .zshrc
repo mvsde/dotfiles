@@ -1,24 +1,6 @@
 export ZSH="/home/fynn/.oh-my-zsh"
 
 
-# Theme
-# https://github.com/spaceship-prompt/spaceship-prompt
-
-ZSH_THEME="spaceship"
-
-SPACESHIP_PROMPT_DEFAULT_PREFIX="· "
-SPACESHIP_GIT_PREFIX="· "
-SPACESHIP_DOCKER_PREFIX="· "
-SPACESHIP_EXEC_TIME_PREFIX="· "
-
-SPACESHIP_BATTERY_THRESHOLD=40
-SPACESHIP_BATTERY_SYMBOL_CHARGING="⇡ "
-SPACESHIP_BATTERY_SYMBOL_DISCHARGING="⇣ "
-
-SPACESHIP_EXIT_CODE_SHOW="true"
-SPACESHIP_EXIT_CODE_SYMBOL="⨯ "
-
-
 # Node Version Manager
 
 export NVM_DIR="$HOME/.nvm"
@@ -26,7 +8,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 
-# Plugins
+# zsh plugins
 
 plugins=(
   docker
@@ -135,3 +117,8 @@ function update-zsh-custom () {
 
   cd $CWD
 }
+
+
+# Load Starship prompt
+
+eval "$(starship init zsh)"
