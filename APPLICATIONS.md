@@ -3,6 +3,7 @@
 ## Linux
 
 * [Draw On Your Screen](https://codeberg.org/som/DrawOnYourScreen)
+* [exa](https://the.exa.website/)
 * [onedriver](https://github.com/jstaf/onedriver)
 * [Peek](https://github.com/phw/peek)
 * [Piper](https://github.com/libratbag/piper/)

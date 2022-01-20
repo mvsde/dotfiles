@@ -60,6 +60,8 @@ export EDITOR="nano"
 # Aliases
 
 alias dc=docker-compose
+alias la="exa --all --group-directories-first --classify --long --git --time-style long-iso"
+alias lat="la --tree"
 alias update-browserslist="npx browserslist@latest --update-db"
 
 
