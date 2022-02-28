@@ -57,6 +57,7 @@ ln --symbolic $REPO_DIR/nvm-default-packages $NVM_DIR/default-packages
 
 flatpak install flathub com.github.liferooter.textpieces
 flatpak install flathub com.github.maoschanz.drawing
+flatpak install flathub com.rafaelmardojai.WebfontKitGenerator
 flatpak install flathub io.github.seadve.Kooha
 flatpak install flathub org.gimp.GIMP
 flatpak install flathub org.gnome.DejaDup
@@ -66,11 +67,8 @@ flatpak install flathub org.gnome.Geary
 flatpak install flathub org.gnome.gitg
 flatpak install flathub org.gustavoperedo.FontDownloader
 flatpak install flathub org.inkscape.Inkscape
-flatpak install flathub org.libreoffice.LibreOffice
 flatpak install flathub org.mozilla.Thunderbird
 flatpak install flathub org.signal.Signal
-flatpak install flathub re.sonny.OhMySVG
-flatpak install flathub us.zoom.Zoom
 
 
 # Enpass
