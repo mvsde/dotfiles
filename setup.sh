@@ -82,8 +82,8 @@ flatpak install fr.romainvigier.MetadataCleaner
 flatpak install org.gnome.seahorse.Application
 
 
-# Enpass
-# https://www.enpass.io/support/kb/general/how-to-install-enpass-on-linux/
+# 1Password
+# https://1password.com/downloads/linux/
 
 # Distro-specific installation steps…
 
