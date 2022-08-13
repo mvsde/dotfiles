@@ -109,13 +109,6 @@ function update-zsh-custom () {
     cd ..
   done
 
-  for THEME in $ZSH/custom/themes/*/; do
-    cd $THEME
-    pwd
-    git pull
-    cd ..
-  done
-
   cd $CWD
 }
 
