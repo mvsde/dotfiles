@@ -8,6 +8,8 @@ APPS_DIR=~/Projects/apps
 # Tilix
 # https://gnunn1.github.io/tilix-web/
 
+sudo dnf install tilix tilix-nautilus
+mkdir --parents ~/.config/tilix/schemes
 ln --symbolic $REPO_DIR/tilix-theme.json ~/.config/tilix/schemes/Light.json
 
 
@@ -119,8 +121,6 @@ ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono[wght].ttf" ~
 ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono-Italic[wght].ttf" ~/.local/share/fonts/"JetBrainsMono-Italic[wght].ttf"
 cd $REPO_DIR
 
-ln --symbolic $REPO_DIR/ubuntu-emoji.xml ~/.config/fontconfig/conf.d/01-emoji.conf
-sudo fc-cache -fv
 
 # Disable USB peripheral wakeup
 
