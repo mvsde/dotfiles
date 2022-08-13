@@ -89,7 +89,7 @@ flatpak install org.gnome.seahorse.Application
 
 
 # Docker
-# https://docs.docker.com/engine/install/ubuntu/
+# https://docs.docker.com/engine/install/
 
 # Distro-specific installation steps…
 
