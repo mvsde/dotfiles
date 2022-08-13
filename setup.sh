@@ -16,6 +16,13 @@ ln --symbolic $REPO_DIR/tilix-theme.json ~/.config/tilix/schemes/Light.json
 ln --symbolic $REPO_DIR/.gitconfig ~/.gitconfig
 
 
+# bat
+# https://github.com/sharkdp/bat
+
+mkdir --parents ~/.config/bat/
+ln --symbolic $REPO_DIR/bat.ini ~/.config/bat/config
+
+
 # Oh My Zsh
 # https://ohmyz.sh/#install
 
