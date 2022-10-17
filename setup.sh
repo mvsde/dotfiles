@@ -79,6 +79,7 @@ flatpak install flathub org.gnome.Geary
 flatpak install flathub org.gnome.gitg
 flatpak install flathub org.inkscape.Inkscape
 flatpak install flathub org.mozilla.Thunderbird
+flatpak install flathub org.nickvision.tubeconverter
 flatpak install flathub org.signal.Signal
 flatpak install fr.romainvigier.MetadataCleaner
 flatpak install org.gnome.seahorse.Application
