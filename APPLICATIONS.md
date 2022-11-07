@@ -9,3 +9,4 @@
 * [Piper](https://github.com/libratbag/piper/)
 * [RecApp](https://github.com/amikha1lov/RecApp)
 * [Touché](https://github.com/JoseExposito/touche)
+* [trash-cli](https://github.com/andreafrancia/trash-cli)
