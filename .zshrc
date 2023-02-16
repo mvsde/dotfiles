@@ -44,20 +44,11 @@ export EDITOR="nano"
 alias la="exa --all --group-directories-first --classify --long --git --time-style long-iso"
 alias lat="la --tree"
 alias open=xdg-open
+alias suspendtime="journalctl --boot | grep systemd-sleep"
 alias update-browserslist="npx browserslist@latest --update-db"
 
 
 # Functions
-
-function chpwd () {
-  la
-}
-
-function suspendtime () {
-  # Similar to 'uptime' but to get the suspend time.
-
-  journalctl --boot | grep systemd-sleep
-}
 
 function groom-dependencies {
   # Source: https://kittygiraudel.com/2020/11/19/managing-npm-dependencies/
