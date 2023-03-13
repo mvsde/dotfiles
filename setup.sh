@@ -71,10 +71,9 @@ flatpak install flathub com.github.maoschanz.drawing
 flatpak install flathub com.rafaelmardojai.WebfontKitGenerator
 flatpak install flathub com.raggesilver.BlackBox
 flatpak install flathub io.github.seadve.Kooha
+flatpak install flathub me.iepure.devtoolbox
 flatpak install flathub org.gimp.GIMP
-flatpak install flathub org.gnome.DejaDup
 flatpak install flathub org.gnome.design.Contrast
-flatpak install flathub org.gnome.design.Lorem
 flatpak install flathub org.gnome.Geary
 flatpak install flathub org.gnome.gitg
 flatpak install flathub org.inkscape.Inkscape
