@@ -66,6 +66,7 @@ ln --symbolic $REPO_DIR/nvm-default-packages $NVM_DIR/default-packages
 
 flatpak install com.github.jeromerobert.pdfarranger
 flatpak install com.rafaelmardojai.SharePreview
+flatpak install flathub com.belmoussaoui.Obfuscate
 flatpak install flathub com.github.liferooter.textpieces
 flatpak install flathub com.github.maoschanz.drawing
 flatpak install flathub com.rafaelmardojai.WebfontKitGenerator
