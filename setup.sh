@@ -71,6 +71,7 @@ flatpak install flathub com.github.liferooter.textpieces
 flatpak install flathub com.github.maoschanz.drawing
 flatpak install flathub com.rafaelmardojai.WebfontKitGenerator
 flatpak install flathub com.raggesilver.BlackBox
+flatpak install flathub dev.geopjr.Tuba
 flatpak install flathub io.github.seadve.Kooha
 flatpak install flathub me.iepure.devtoolbox
 flatpak install flathub org.gimp.GIMP
