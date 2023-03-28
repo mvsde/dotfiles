@@ -5,14 +5,6 @@ REPO_DIR=~/Projects/github/mvsde/dotfiles
 APPS_DIR=~/Projects/apps
 
 
-# Tilix
-# https://gnunn1.github.io/tilix-web/
-
-sudo dnf install tilix tilix-nautilus
-mkdir --parents ~/.config/tilix/schemes
-ln --symbolic $REPO_DIR/tilix-theme.json ~/.config/tilix/schemes/Light.json
-
-
 # Git
 
 ln --symbolic $REPO_DIR/.gitconfig ~/.gitconfig
