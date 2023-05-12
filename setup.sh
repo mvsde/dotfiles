@@ -45,7 +45,6 @@ ln --symbolic $REPO_DIR/starship.toml ~/.config/starship.toml
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
 nvm install
-npm completion > $ZSH_CUSTOM/npm.zsh
 
 # npm saves auth tokens to the config file, so this can’t be linked.
 cp $REPO_DIR/.npmrc ~/.npmrc
@@ -111,6 +110,7 @@ cd $REPO_DIR
 
 cd $APPS_DIR
 git clone git@github.com:JetBrains/JetBrainsMono.git
+mkdir --parents ~/.local/share/fonts
 ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono[wght].ttf" ~/.local/share/fonts/"JetBrainsMono[wght].ttf"
 ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono-Italic[wght].ttf" ~/.local/share/fonts/"JetBrainsMono-Italic[wght].ttf"
 cd $REPO_DIR

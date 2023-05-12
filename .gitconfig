@@ -1,7 +1,13 @@
 [user]
 	name = Fynn Becker
 	email = post@fynn.be
-	signingkey = 4CFDFD6582321036
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBOvQEl1MYUrZ13nQxnFKMvn8KWcy8QC86NVDEAq6MFy
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
 
 [core]
 	editor = nano
