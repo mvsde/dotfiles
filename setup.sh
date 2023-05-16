@@ -88,6 +88,9 @@ flatpak install org.gnome.seahorse.Application
 
 # Distro-specific installation steps…
 
+# `docker-compose` passthrough to `docker compose`
+sudo ln --symbolic $REPO_DIR/docker-compose /usr/local/bin/docker-compose
+
 
 # Stuff and things
 
