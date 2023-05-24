@@ -7,14 +7,14 @@ APPS_DIR=~/Projects/apps
 
 # Git
 
-ln --symbolic $REPO_DIR/.gitconfig ~/.gitconfig
+ln --symbolic $REPO_DIR/configs/.gitconfig ~/.gitconfig
 
 
 # bat
 # https://github.com/sharkdp/bat
 
 mkdir --parents ~/.config/bat/
-ln --symbolic $REPO_DIR/bat.ini ~/.config/bat/config
+ln --symbolic $REPO_DIR/configs/bat.ini ~/.config/bat/config
 
 
 # Oh My Zsh
@@ -29,14 +29,14 @@ git clone git@github.com:zsh-users/zsh-autosuggestions.git
 
 cd $REPO_DIR
 
-ln --symbolic $REPO_DIR/.zshrc ~/.zshrc
+ln --symbolic $REPO_DIR/configs/.zshrc ~/.zshrc
 
 
 # Starship
 # https://starship.rs/
 
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-ln --symbolic $REPO_DIR/starship.toml ~/.config/starship.toml
+ln --symbolic $REPO_DIR/configs/starship.toml ~/.config/starship.toml
 
 
 # Node.js
@@ -47,13 +47,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 nvm install
 
 # npm saves auth tokens to the config file, so this can’t be linked.
-cp $REPO_DIR/.npmrc ~/.npmrc
+cp $REPO_DIR/configs/.npmrc ~/.npmrc
 
-ln --symbolic $REPO_DIR/.nuxtrc ~/.nuxtrc
-ln --symbolic $REPO_DIR/nvm-default-packages $NVM_DIR/default-packages
+ln --symbolic $REPO_DIR/configs/.nuxtrc ~/.nuxtrc
+ln --symbolic $REPO_DIR/configs/nvm-default-packages $NVM_DIR/default-packages
 
 
-## Flatpak
+# Flatpak
 
 flatpak install com.github.jeromerobert.pdfarranger
 flatpak install com.rafaelmardojai.SharePreview
@@ -76,6 +76,8 @@ flatpak install flathub org.signal.Signal
 flatpak install fr.romainvigier.MetadataCleaner
 flatpak install org.gnome.seahorse.Application
 
+ln --symbolic $REPO_DIR/themes/tomorrow+.json ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes/tomorrow+.json
+
 
 # 1Password
 # https://1password.com/downloads/linux/
@@ -89,7 +91,7 @@ flatpak install org.gnome.seahorse.Application
 # Distro-specific installation steps…
 
 # `docker-compose` passthrough to `docker compose`
-sudo ln --symbolic $REPO_DIR/docker-compose /usr/local/bin/docker-compose
+sudo ln --symbolic $REPO_DIR/apps/docker-compose /usr/local/bin/docker-compose
 
 
 # Stuff and things
@@ -121,6 +123,6 @@ cd $REPO_DIR
 
 # Disable USB peripheral wakeup
 
-sudo cp $REPO_DIR/disable-usb-wakeup.service /lib/systemd/system/disable-usb-wakeup.service
+sudo cp $REPO_DIR/services/disable-usb-wakeup.service /lib/systemd/system/disable-usb-wakeup.service
 systemctl enable disable-usb-wakeup.service
 systemctl start disable-usb-wakeup.service
