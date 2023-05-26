@@ -5,17 +5,26 @@ REPO_DIR=~/Projects/github/mvsde/dotfiles
 APPS_DIR=~/Projects/apps
 
 
+# ------------------------------------------------------------------------------
 # Git
+# ------------------------------------------------------------------------------
 
 ln --symbolic $REPO_DIR/configs/.gitconfig ~/.gitconfig
 
 
+# ------------------------------------------------------------------------------
 # bat
+# ------------------------------------------------------------------------------
+
 # https://github.com/sharkdp/bat
 
 mkdir --parents ~/.config/bat/
 ln --symbolic $REPO_DIR/configs/bat.ini ~/.config/bat/config
 
+
+# ------------------------------------------------------------------------------
+# zsh
+# ------------------------------------------------------------------------------
 
 # Oh My Zsh
 # https://ohmyz.sh/#install
@@ -39,7 +48,10 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 ln --symbolic $REPO_DIR/configs/starship.toml ~/.config/starship.toml
 
 
+# ------------------------------------------------------------------------------
 # Node.js
+# ------------------------------------------------------------------------------
+
 # https://github.com/nvm-sh/nvm/blob/master/README.md
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
@@ -53,7 +65,9 @@ ln --symbolic $REPO_DIR/configs/.nuxtrc ~/.nuxtrc
 ln --symbolic $REPO_DIR/configs/nvm-default-packages $NVM_DIR/default-packages
 
 
+# ------------------------------------------------------------------------------
 # Flatpak
+# ------------------------------------------------------------------------------
 
 flatpak install com.github.jeromerobert.pdfarranger
 flatpak install com.rafaelmardojai.SharePreview
@@ -79,22 +93,29 @@ flatpak install org.gnome.seahorse.Application
 ln --symbolic $REPO_DIR/themes/tomorrow+.json ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes/tomorrow+.json
 
 
+# ------------------------------------------------------------------------------
 # 1Password
+# ------------------------------------------------------------------------------
+
+# Distro-specific installation steps:
 # https://1password.com/downloads/linux/
 
-# Distro-specific installation steps…
 
-
+# ------------------------------------------------------------------------------
 # Docker
+# ------------------------------------------------------------------------------
+
+# Distro-specific installation steps:
 # https://docs.docker.com/engine/install/
 
-# Distro-specific installation steps…
 
 # `docker-compose` passthrough to `docker compose`
 sudo ln --symbolic $REPO_DIR/apps/docker-compose /usr/local/bin/docker-compose
 
 
+# ------------------------------------------------------------------------------
 # Stuff and things
+# ------------------------------------------------------------------------------
 
 mkdir --parents $APPS_DIR
 
