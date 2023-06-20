@@ -51,16 +51,6 @@ alias update-browserslist="npx browserslist@latest --update-db"
 
 # Functions
 
-function update-docker-compose () {
-  local INSTALL_PATH="/usr/local/bin/docker-compose"
-
-  curl --silent https://api.github.com/repos/docker/compose/releases/latest \
-    | grep --perl-regexp --only-matching "(?<=browser_download_url\": \").+/docker-compose-linux-x86_64(?=\")" \
-    | sudo wget --input-file - --output-document $INSTALL_PATH
-
-  sudo chmod +x $INSTALL_PATH
-}
-
 function update-zsh-custom () {
   local CWD=`pwd`
 
