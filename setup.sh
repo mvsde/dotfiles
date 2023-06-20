@@ -90,6 +90,11 @@ flatpak install flathub org.signal.Signal
 flatpak install fr.romainvigier.MetadataCleaner
 flatpak install org.gnome.seahorse.Application
 
+
+# ------------------------------------------------------------------------------
+# Black Box
+# ------------------------------------------------------------------------------
+
 ln --symbolic $REPO_DIR/themes/tomorrow+.json ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes/tomorrow+.json
 
 
