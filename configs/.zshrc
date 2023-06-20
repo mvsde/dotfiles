@@ -73,3 +73,17 @@ function update-zsh-custom () {
 
   cd $CWD
 }
+
+function update-ddev-completions () {
+  local DDEV_VERSION=`ddev version --json-output | jq -r '.raw."DDEV version"'`
+  local COMPLETIONS_ARCHIVE="ddev_shell_completion_scripts.${DDEV_VERSION}.tar.gz"
+  local COMPLETIONS_FOLDER="$ZSH/completions"
+  local TEMP_FOLDER=`mktemp --directory`
+
+  mkdir --parents ${COMPLETIONS_FOLDER}
+
+  curl --location https://github.com/ddev/ddev/releases/download/${DDEV_VERSION}/${COMPLETIONS_ARCHIVE} --remote-name --output-dir ${TEMP_FOLDER}
+  tar --extract --file ${TEMP_FOLDER}/${COMPLETIONS_ARCHIVE} --directory ${TEMP_FOLDER}
+
+  cp ${TEMP_FOLDER}/ddev_zsh_completion.sh ${COMPLETIONS_FOLDER}/_ddev
+}
