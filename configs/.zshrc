@@ -14,6 +14,7 @@ plugins=(
   docker
   docker-compose
   git
+  httpie
   npm
   starship
   yarn
