@@ -38,6 +38,7 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG="en_US.UTF-8"
 export EDITOR="nano"
+export STORYBOOK_DISABLE_TELEMETRY=1
 
 
 # Aliases
