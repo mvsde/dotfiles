@@ -3,6 +3,7 @@
 
 REPO_DIR=~/Projects/github/mvsde/dotfiles
 APPS_DIR=~/Projects/apps
+FONTS_DIR=~/.local/share/fonts
 
 
 # ------------------------------------------------------------------------------
@@ -137,14 +138,16 @@ cd $APPS_DIR/emoji-selector-for-gnome
 cd $REPO_DIR
 
 
-# JetBrains Mono
-# https://github.com/JetBrains/JetBrainsMono
+# Fonts
+
+mkdir --parents $FONTS_DIR
 
 cd $APPS_DIR
+
+# https://github.com/JetBrains/JetBrainsMono
 git clone git@github.com:JetBrains/JetBrainsMono.git
-mkdir --parents ~/.local/share/fonts
-ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono[wght].ttf" ~/.local/share/fonts/"JetBrainsMono[wght].ttf"
-ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/"JetBrainsMono-Italic[wght].ttf" ~/.local/share/fonts/"JetBrainsMono-Italic[wght].ttf"
+ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/*.ttf $FONTS_DIR
+
 cd $REPO_DIR
 
 
