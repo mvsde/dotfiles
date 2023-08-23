@@ -3,6 +3,7 @@
 ## Linux
 
 - [Dim completed calendar events](https://github.com/marcinjahn/gnome-dim-completed-calendar-events-extension)
+- [doggo](https://github.com/mr-karan/doggo)
 - [exa](https://the.exa.website/)
 - [onedriver](https://github.com/jstaf/onedriver)
 - [Peek](https://github.com/phw/peek)
