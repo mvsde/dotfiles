@@ -70,29 +70,31 @@ ln --symbolic $REPO_DIR/configs/nvm-default-packages $NVM_DIR/default-packages
 # Flatpak
 # ------------------------------------------------------------------------------
 
-flatpak install com.github.jeromerobert.pdfarranger
-flatpak install com.rafaelmardojai.SharePreview
-flatpak install com.tomjwatson.Emote
 flatpak install flathub com.belmoussaoui.Obfuscate
+flatpak install flathub com.github.finefindus.eyedropper
+flatpak install flathub com.github.jeromerobert.pdfarranger
 flatpak install flathub com.github.liferooter.textpieces
 flatpak install flathub com.github.maoschanz.drawing
+flatpak install flathub com.rafaelmardojai.SharePreview
 flatpak install flathub com.rafaelmardojai.WebfontKitGenerator
 flatpak install flathub com.raggesilver.BlackBox
+flatpak install flathub com.tomjwatson.Emote
+flatpak install flathub fr.romainvigier.MetadataCleaner
 flatpak install flathub io.github.fabrialberio.pinapp
 flatpak install flathub io.github.seadve.Kooha
+flatpak install flathub it.mijorus.smile
 flatpak install flathub me.iepure.devtoolbox
 flatpak install flathub org.gimp.GIMP
 flatpak install flathub org.gnome.design.Contrast
+flatpak install flathub org.gnome.Epiphany
+flatpak install flathub org.gnome.Extensions
 flatpak install flathub org.gnome.Geary
 flatpak install flathub org.gnome.gitg
+flatpak install flathub org.gnome.seahorse.Application
 flatpak install flathub org.inkscape.Inkscape
 flatpak install flathub org.mozilla.Thunderbird
 flatpak install flathub org.nickvision.tubeconverter
 flatpak install flathub org.signal.Signal
-flatpak install fr.romainvigier.MetadataCleaner
-flatpak install org.gnome.Epiphany
-flatpak install org.gnome.Extensions
-flatpak install org.gnome.seahorse.Application
 
 
 # ------------------------------------------------------------------------------
