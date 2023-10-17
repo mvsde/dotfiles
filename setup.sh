@@ -151,9 +151,15 @@ sudo cp $REPO_DIR/services/disable-usb-wakeup.service /lib/systemd/system/disabl
 systemctl enable disable-usb-wakeup.service
 systemctl start disable-usb-wakeup.service
 
+
 # Multimedia codecs
 # https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/
 
 sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf install lame\* --exclude=lame-devel
 sudo dnf group upgrade --with-optional Multimedia
+
+
+# Center new windows
+
+gsettings set org.gnome.mutter center-new-windows true
