@@ -71,6 +71,7 @@ ln --symbolic $REPO_DIR/configs/nvm-default-packages $NVM_DIR/default-packages
 # ------------------------------------------------------------------------------
 
 flatpak install flathub com.belmoussaoui.Obfuscate
+flatpak install flathub com.felipekinoshita.Wildcard
 flatpak install flathub com.github.finefindus.eyedropper
 flatpak install flathub com.github.jeromerobert.pdfarranger
 flatpak install flathub com.github.liferooter.textpieces
