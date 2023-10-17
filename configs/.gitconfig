@@ -12,6 +12,7 @@
 [core]
 	editor = nano
 	eol = lf
+	excludesfile = ~/.gitignore
 
 [init]
 	defaultBranch = main
