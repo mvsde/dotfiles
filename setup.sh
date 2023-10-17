@@ -131,17 +131,6 @@ sudo ln --symbolic $REPO_DIR/apps/docker-compose /usr/local/bin/docker-compose
 
 mkdir --parents $APPS_DIR
 
-# Emoji Selector
-# https://github.com/maoschanz/emoji-selector-for-gnome
-
-cd $APPS_DIR
-git clone git@github.com:maoschanz/emoji-selector-for-gnome.git
-
-cd $APPS_DIR/emoji-selector-for-gnome
-./install.sh
-
-cd $REPO_DIR
-
 
 # Fonts
 
