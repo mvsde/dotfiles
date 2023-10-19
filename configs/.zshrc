@@ -39,6 +39,10 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG="en_US.UTF-8"
 export EDITOR="nano"
+
+# Telemetry
+
+export NUXT_TELEMETRY_DISABLED=1
 export STORYBOOK_DISABLE_TELEMETRY=1
 
 
