@@ -51,7 +51,7 @@ export STORYBOOK_DISABLE_TELEMETRY=1
 
 # Aliases
 
-alias la="exa --all --group-directories-first --classify --long --git --time-style long-iso"
+alias la="eza --all --group-directories-first --classify --long --git --time-style long-iso"
 alias lat="la --tree"
 alias open=xdg-open
 alias suspendtime="journalctl --boot | grep systemd-sleep"
