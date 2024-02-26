@@ -63,8 +63,6 @@ nvm install
 # npm saves auth tokens to the config file, so this can’t be linked.
 cp $REPO_DIR/configs/.npmrc ~/.npmrc
 
-ln --symbolic $REPO_DIR/configs/nvm-default-packages $NVM_DIR/default-packages
-
 
 # ------------------------------------------------------------------------------
 # Flatpak
