@@ -81,6 +81,7 @@ flatpak install flathub com.tomjwatson.Emote
 flatpak install flathub fr.romainvigier.MetadataCleaner
 flatpak install flathub io.github.fabrialberio.pinapp
 flatpak install flathub io.github.seadve.Kooha
+flatpak install flathub io.missioncenter.MissionCenter
 flatpak install flathub it.mijorus.smile
 flatpak install flathub me.iepure.devtoolbox
 flatpak install flathub org.gimp.GIMP
