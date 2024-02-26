@@ -26,5 +26,8 @@
 [pull]
 	rebase = true
 
+[rerere]
+	enabled = true
+
 [includeIf "gitdir:~/Projects/factorial/"]
 	path = ~/Projects/factorial/.gitconfig
