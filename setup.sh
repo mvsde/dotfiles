@@ -74,26 +74,26 @@ flatpak install flathub com.github.finefindus.eyedropper
 flatpak install flathub com.github.jeromerobert.pdfarranger
 flatpak install flathub com.github.liferooter.textpieces
 flatpak install flathub com.github.maoschanz.drawing
+flatpak install flathub com.mattermost.Desktop
 flatpak install flathub com.rafaelmardojai.SharePreview
-flatpak install flathub com.rafaelmardojai.WebfontKitGenerator
 flatpak install flathub com.raggesilver.BlackBox
-flatpak install flathub com.tomjwatson.Emote
+flatpak install flathub com.slack.Slack
+flatpak install flathub de.schmidhuberj.Flare
 flatpak install flathub fr.romainvigier.MetadataCleaner
 flatpak install flathub io.github.fabrialberio.pinapp
-flatpak install flathub io.github.seadve.Kooha
 flatpak install flathub io.missioncenter.MissionCenter
 flatpak install flathub it.mijorus.smile
-flatpak install flathub me.iepure.devtoolbox
 flatpak install flathub org.gimp.GIMP
 flatpak install flathub org.gnome.design.Contrast
-flatpak install flathub org.gnome.Epiphany
 flatpak install flathub org.gnome.Extensions
 flatpak install flathub org.gnome.Geary
 flatpak install flathub org.gnome.gitg
+flatpak install flathub org.gnome.gitlab.YaLTeR.Identity
 flatpak install flathub org.gnome.seahorse.Application
 flatpak install flathub org.inkscape.Inkscape
 flatpak install flathub org.mozilla.Thunderbird
 flatpak install flathub org.nickvision.tubeconverter
+flatpak install flathub org.remmina.Remmina
 flatpak install flathub org.signal.Signal
 
 
