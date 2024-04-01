@@ -33,15 +33,17 @@ ln --symbolic $REPO_DIR/configs/bat.ini ~/.config/bat/config
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-cd "$ZSH_CUSTOM/plugins" || exit
+(
+	cd "$ZSH_CUSTOM/plugins" || exit
 
-git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
-git clone git@github.com:zsh-users/zsh-autosuggestions.git
-
-cd "$REPO_DIR" || exit
+	git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+	git clone git@github.com:zsh-users/zsh-autosuggestions.git
+)
 
 ln --symbolic $REPO_DIR/configs/.zshrc ~/.zshrc
 
+# Create completions folder
+mkdir "$ZSH/completions"
 
 # Starship
 # https://starship.rs/
@@ -62,6 +64,16 @@ nvm install
 
 # npm saves auth tokens to the config file, so this can’t be linked.
 cp $REPO_DIR/configs/.npmrc ~/.npmrc
+
+
+# ------------------------------------------------------------------------------
+# Apps
+# ------------------------------------------------------------------------------
+
+sudo dnf install bat
+sudo dnf install eza
+sudo dnf install jq
+sudo dnf install trash-cli
 
 
 # ------------------------------------------------------------------------------
@@ -152,13 +164,13 @@ mkdir --parents $APPS_DIR
 
 mkdir --parents $FONTS_DIR
 
-cd "$APPS_DIR" || exit
+(
+	cd "$APPS_DIR" || exit
 
-# https://github.com/JetBrains/JetBrainsMono
-git clone git@github.com:JetBrains/JetBrainsMono.git
-ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/*.ttf $FONTS_DIR
-
-cd "$REPO_DIR" || exit
+	# https://github.com/JetBrains/JetBrainsMono
+	git clone git@github.com:JetBrains/JetBrainsMono.git
+	ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/*.ttf $FONTS_DIR
+)
 
 
 # Disable USB peripheral wakeup
