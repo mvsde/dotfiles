@@ -88,3 +88,9 @@ function update-ddev-completions () {
 
   cp ${TEMP_FOLDER}/ddev_zsh_completion.sh ${COMPLETIONS_FOLDER}/_ddev
 }
+
+function git-pull-all () {
+  git branch --remotes | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+  git fetch --all
+  git pull --all
+}
