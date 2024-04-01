@@ -33,12 +33,12 @@ ln --symbolic $REPO_DIR/configs/bat.ini ~/.config/bat/config
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-cd $ZSH_CUSTOM/plugins
+cd "$ZSH_CUSTOM/plugins" || exit
 
 git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
 git clone git@github.com:zsh-users/zsh-autosuggestions.git
 
-cd $REPO_DIR
+cd "$REPO_DIR" || exit
 
 ln --symbolic $REPO_DIR/configs/.zshrc ~/.zshrc
 
@@ -108,16 +108,33 @@ ln --symbolic $REPO_DIR/themes/tomorrow+.json ~/.var/app/com.raggesilver.BlackBo
 # 1Password
 # ------------------------------------------------------------------------------
 
-# Distro-specific installation steps:
 # https://1password.com/downloads/linux/
+
+sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
+sudo sh -c 'echo -e "[1password]\nname=1Password Stable Channel\nbaseurl=https://downloads.1password.com/linux/rpm/stable/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\"https://downloads.1password.com/linux/keys/1password.asc\"" > /etc/yum.repos.d/1password.repo'
+sudo dnf install 1password
 
 
 # ------------------------------------------------------------------------------
 # Docker
 # ------------------------------------------------------------------------------
 
-# Distro-specific installation steps:
 # https://docs.docker.com/engine/install/
+
+sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl start docker
+
+# Use without root
+sudo groupadd docker
+sudo usermod -aG docker "$USER"
+newgrp docker
+docker run hello-world
+
+# Start on boot
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
 
 
 # `docker-compose` passthrough to `docker compose`
@@ -135,13 +152,13 @@ mkdir --parents $APPS_DIR
 
 mkdir --parents $FONTS_DIR
 
-cd $APPS_DIR
+cd "$APPS_DIR" || exit
 
 # https://github.com/JetBrains/JetBrainsMono
 git clone git@github.com:JetBrains/JetBrainsMono.git
 ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/*.ttf $FONTS_DIR
 
-cd $REPO_DIR
+cd "$REPO_DIR" || exit
 
 
 # Disable USB peripheral wakeup
