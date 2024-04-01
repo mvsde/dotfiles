@@ -17,17 +17,34 @@
 [init]
 	defaultBranch = main
 
+[branch]
+	sort = -committerdate
+
+[diff]
+	algorithm = histogram
+	colorMoved = default
+
 [commit]
 	gpgsign = true
 
+[log]
+	date = iso
+
 [push]
 	autoSetupRemote = true
+	followtags = true
 
 [pull]
 	rebase = true
 
+[merge]
+	conflictstyle = zdiff3
+
 [rerere]
 	enabled = true
+
+[help]
+	autocorrect = prompt
 
 [includeIf "gitdir:~/Projects/factorial/"]
 	path = ~/Projects/factorial/.gitconfig
