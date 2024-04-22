@@ -8,3 +8,12 @@
 # Clear Chrome GPU cache
 
 rm -rf ~/.config/google-chrome/Default/GPUCache/
+
+
+# ------------------------------------------------------------------------------
+# Git
+# ------------------------------------------------------------------------------
+
+# Delete ignored files
+
+find FOLDER_NAME -name '*.git' -execdir sh -c 'cd {}/.. && git clean -f -d -X' \;
