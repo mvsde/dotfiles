@@ -10,7 +10,6 @@
 	program = /opt/1Password/op-ssh-sign
 
 [core]
-	editor = nano
 	eol = lf
 	excludesfile = ~/.gitignore
 

@@ -41,7 +41,7 @@ export NVM_DIR="$HOME/.nvm"
 # ------------------------------------------------------------------------------
 
 export LANG="en_US.UTF-8"
-export EDITOR="nano"
+export EDITOR="code --wait"
 
 # Telemetry
 
