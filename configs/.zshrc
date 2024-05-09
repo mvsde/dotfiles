@@ -59,6 +59,7 @@ export STORYBOOK_DISABLE_TELEMETRY=1
 alias la="eza --all --group-directories-first --classify --long --git --time-style long-iso"
 alias lat="la --tree"
 alias ncu="npx npm-check-updates@latest"
+alias nr="node --run"
 alias open="xdg-open"
 alias serve="npx serve@latest"
 alias suspendtime="journalctl --boot | grep systemd-sleep"
