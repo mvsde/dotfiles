@@ -64,6 +64,7 @@ alias open="xdg-open"
 alias serve="npx serve@latest"
 alias suspendtime="journalctl --boot | grep systemd-sleep"
 alias update-browserslist="npx browserslist@latest --update-db"
+alias github-toc="bitdowntoc --profile=GITHUB --indent-chars=- --indent-spaces=2 --inplace"
 
 
 # ------------------------------------------------------------------------------
@@ -143,6 +144,26 @@ function update-doggo () {
   curl --silent --show-error "https://raw.githubusercontent.com/mr-karan/doggo/main/completions/doggo.zsh" --output "${ZSH}/completions/_doggo"
 
   echo "Updated doggo"
+}
+
+function update-bitdowntoc () {
+  echo "Updating bitdowntoc…"
+
+  local BINARY_URL
+  local TEMP_FOLDER
+
+  BINARY_URL=$(
+    curl --silent --show-error "https://api.github.com/repos/derlin/bitdowntoc/releases/latest" |
+    jq --raw-output '.assets[] | select(.name=="bitdowntoc_linux") | .browser_download_url'
+  )
+  TEMP_FOLDER=$(mktemp --directory)
+
+  curl --silent --show-error --location "${BINARY_URL}" --output "${TEMP_FOLDER}/bitdowntoc"
+  chmod +x "${TEMP_FOLDER}/bitdowntoc"
+
+  sudo mv "${TEMP_FOLDER}/bitdowntoc" "/usr/local/bin"
+
+  echo "Updated bitdowntoc"
 }
 
 function update-all () {
