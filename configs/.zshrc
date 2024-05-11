@@ -73,7 +73,7 @@ alias update-browserslist="npx browserslist@latest --update-db"
 # Update scripts
 
 function update-zsh-custom () {
-  echo "Updating zsh custom"
+  echo "Updating zsh custom…"
 
   for PLUGIN in "${ZSH}/custom/plugins"/*; do
     (
@@ -82,10 +82,12 @@ function update-zsh-custom () {
       git pull
     )
   done
+
+  echo "Updated zsh custom"
 }
 
 function update-git-open () {
-  echo "Updating git-open"
+  echo "Updating git-open…"
 
   local TEMP_FOLDER
 
@@ -95,10 +97,12 @@ function update-git-open () {
   chmod +x "${TEMP_FOLDER}/git-open"
 
   sudo mv "${TEMP_FOLDER}/git-open" "/usr/local/bin"
+
+  echo "Updated git-open"
 }
 
 function update-ddev-completions () {
-  echo "Updating DDEV completions"
+  echo "Updating DDEV completions…"
 
   local DDEV_VERSION
   local ARCHIVE_NAME
@@ -115,10 +119,12 @@ function update-ddev-completions () {
   tar --extract --file "${TEMP_FOLDER}/${ARCHIVE_NAME}" --directory "${TEMP_FOLDER}"
 
   cp "${TEMP_FOLDER}/ddev_zsh_completion.sh" "${ZSH}/completions/_ddev"
+
+  echo "Updated DDEV completions"
 }
 
 function update-doggo () {
-  echo "Updating doggo"
+  echo "Updating doggo…"
 
   local ARCHIVE_URL
   local TEMP_FOLDER
@@ -135,6 +141,8 @@ function update-doggo () {
   sudo mv "${TEMP_FOLDER}/doggo" "/usr/local/bin"
 
   curl --silent --show-error "https://raw.githubusercontent.com/mr-karan/doggo/main/completions/doggo.zsh" --output "${ZSH}/completions/_doggo"
+
+  echo "Updated doggo"
 }
 
 function update-all () {
