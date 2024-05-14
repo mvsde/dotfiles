@@ -84,7 +84,7 @@ flatpak install flathub com.belmoussaoui.Obfuscate
 flatpak install flathub com.felipekinoshita.Wildcard
 flatpak install flathub com.github.finefindus.eyedropper
 flatpak install flathub com.github.jeromerobert.pdfarranger
-flatpak install flathub com.github.liferooter.textpieces
+flatpak install flathub io.gitlab.liferooter.TextPieces
 flatpak install flathub com.github.maoschanz.drawing
 flatpak install flathub com.mattermost.Desktop
 flatpak install flathub com.rafaelmardojai.SharePreview
