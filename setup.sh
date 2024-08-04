@@ -11,7 +11,6 @@ FONTS_DIR=~/.local/share/fonts
 # ------------------------------------------------------------------------------
 
 ln --symbolic $REPO_DIR/configs/.gitconfig ~/.gitconfig
-ln --symbolic $REPO_DIR/configs/.gitignore ~/.gitignore
 
 
 # ------------------------------------------------------------------------------
