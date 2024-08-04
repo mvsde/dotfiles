@@ -132,12 +132,12 @@ function update-doggo () {
 
   ARCHIVE_URL=$(
     curl --silent --show-error "https://api.github.com/repos/mr-karan/doggo/releases/latest" |
-    jq --raw-output '.assets[] | select(.name? | match("doggo_.+_linux_amd64.tar.gz$")) | .browser_download_url'
+    jq --raw-output '.assets[] | select(.name? | match("doggo_.+_Linux_x86_64.tar.gz$")) | .browser_download_url'
   )
   TEMP_FOLDER=$(mktemp --directory)
 
   curl --silent --show-error --location "${ARCHIVE_URL}" --output "${TEMP_FOLDER}/doggo.tar.gz"
-  tar --extract --file "${TEMP_FOLDER}/doggo.tar.gz" --directory "${TEMP_FOLDER}"
+  tar --extract --file "${TEMP_FOLDER}/doggo.tar.gz" --strip-components=1 --directory "${TEMP_FOLDER}"
 
   sudo mv "${TEMP_FOLDER}/doggo" "/usr/local/bin"
 
