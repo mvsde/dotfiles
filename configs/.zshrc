@@ -166,12 +166,29 @@ function update-bitdowntoc () {
   echo "Updated bitdowntoc"
 }
 
+function update-browserstack-local () {
+  echo "Updating BrowserStackLocal…"
+
+  local TEMP_FOLDER
+
+  TEMP_FOLDER=$(mktemp --directory)
+
+  curl --silent --show-error "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip" --remote-name --output-dir "${TEMP_FOLDER}"
+  unzip "${TEMP_FOLDER}/BrowserStackLocal-linux-x64.zip" -d "${TEMP_FOLDER}"
+
+  sudo mv "${TEMP_FOLDER}/BrowserStackLocal" "/usr/local/bin"
+
+  echo "Updated BrowserStackLocal"
+}
+
 function update-all () {
   omz update
 
   update-ddev-completions
   update-doggo
   update-git-open
+  update-bitdowntoc
+  update-browserstack-local
   update-zsh-custom
 
   curl --silent --show-error https://starship.rs/install.sh | sh
