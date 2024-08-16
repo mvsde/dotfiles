@@ -155,6 +155,14 @@ sudo ln --symbolic $REPO_DIR/apps/docker-compose /usr/local/bin/docker-compose
 
 
 # ------------------------------------------------------------------------------
+# Inkscape
+# ------------------------------------------------------------------------------
+
+mkdir --parents ~/.var/app/org.inkscape.Inkscape/config/inkscape/templates/
+ln --symbolic $REPO_DIR/configs/inkscape-default.svg ~/.var/app/org.inkscape.Inkscape/config/inkscape/templates/default.svg
+
+
+# ------------------------------------------------------------------------------
 # Stuff and things
 # ------------------------------------------------------------------------------
 
