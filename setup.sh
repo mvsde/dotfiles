@@ -166,6 +166,26 @@ ln --symbolic $DOTFILES_DIR/configs/inkscape-default.svg ~/.var/app/org.inkscape
 
 
 # ------------------------------------------------------------------------------
+# RPM Fusion
+# ------------------------------------------------------------------------------
+
+# https://rpmfusion.org/Configuration
+
+sudo dnf install \
+	"https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm" \
+	"https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+
+sudo dnf config-manager --enable fedora-cisco-openh264
+
+# https://rpmfusion.org/Howto/Multimedia
+
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf update @sound-and-video
+sudo dnf install intel-media-driver
+
+
+# ------------------------------------------------------------------------------
 # Stuff and things
 # ------------------------------------------------------------------------------
 
@@ -190,9 +210,3 @@ mkdir --parents $FONTS_DIR
 sudo cp $DOTFILES_DIR/services/disable-usb-wakeup.service /lib/systemd/system/disable-usb-wakeup.service
 systemctl enable disable-usb-wakeup.service
 systemctl start disable-usb-wakeup.service
-
-
-# Multimedia codecs
-# https://docs.fedoraproject.org/en-US/quick-docs/installing-plugins-for-playing-movies-and-music/
-
-sudo dnf group install Multimedia
