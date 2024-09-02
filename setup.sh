@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-REPO_DIR=~/Projects/github/mvsde/dotfiles
+DOTFILES_DIR=~/Projects/github/mvsde/dotfiles
 APPS_DIR=~/Projects/apps
 FONTS_DIR=~/.local/share/fonts
 
@@ -10,7 +10,7 @@ FONTS_DIR=~/.local/share/fonts
 # Git
 # ------------------------------------------------------------------------------
 
-ln --symbolic $REPO_DIR/configs/.gitconfig ~/.gitconfig
+ln --symbolic $DOTFILES_DIR/configs/.gitconfig ~/.gitconfig
 
 
 # ------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ ln --symbolic $REPO_DIR/configs/.gitconfig ~/.gitconfig
 # https://github.com/sharkdp/bat
 
 mkdir --parents ~/.config/bat/
-ln --symbolic $REPO_DIR/configs/bat.ini ~/.config/bat/config
+ln --symbolic $DOTFILES_DIR/configs/bat.ini ~/.config/bat/config
 
 
 # ------------------------------------------------------------------------------
@@ -39,7 +39,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 	git clone git@github.com:zsh-users/zsh-autosuggestions.git
 )
 
-ln --symbolic $REPO_DIR/configs/.zshrc ~/.zshrc
+ln --symbolic $DOTFILES_DIR/configs/.zshrc ~/.zshrc
 
 # Create completions folder
 mkdir "$ZSH/completions"
@@ -48,6 +48,7 @@ mkdir "$ZSH/completions"
 # https://starship.rs/
 
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+ln --symbolic $DOTFILES_DIR/configs/starship.toml ~/.config/starship.toml
 
 
 # ------------------------------------------------------------------------------
@@ -72,7 +73,7 @@ mise use --global usage
 mise use --global node
 
 # npm saves auth tokens to the config file, so this can’t be linked.
-cp $REPO_DIR/configs/.npmrc ~/.npmrc
+cp $DOTFILES_DIR/configs/.npmrc ~/.npmrc
 
 
 # ------------------------------------------------------------------------------
@@ -96,7 +97,6 @@ flatpak install flathub com.github.jeromerobert.pdfarranger
 flatpak install flathub com.github.rafostar.Clapper
 flatpak install flathub com.mattermost.Desktop
 flatpak install flathub com.rafaelmardojai.SharePreview
-flatpak install flathub com.raggesilver.BlackBox
 flatpak install flathub com.slack.Slack
 flatpak install flathub com.thincast.client
 flatpak install flathub fr.romainvigier.MetadataCleaner
@@ -118,13 +118,6 @@ flatpak install flathub org.inkscape.Inkscape
 flatpak install flathub org.mozilla.Thunderbird
 flatpak install flathub org.nickvision.tubeconverter
 flatpak install flathub org.signal.Signal
-
-
-# ------------------------------------------------------------------------------
-# Black Box
-# ------------------------------------------------------------------------------
-
-ln --symbolic $REPO_DIR/themes/tomorrow+.json ~/.var/app/com.raggesilver.BlackBox/data/blackbox/schemes/tomorrow+.json
 
 
 # ------------------------------------------------------------------------------
@@ -161,7 +154,7 @@ sudo systemctl enable containerd.service
 
 
 # `docker-compose` passthrough to `docker compose`
-sudo ln --symbolic $REPO_DIR/apps/docker-compose /usr/local/bin/docker-compose
+sudo ln --symbolic $DOTFILES_DIR/apps/docker-compose /usr/local/bin/docker-compose
 
 
 # ------------------------------------------------------------------------------
@@ -169,7 +162,7 @@ sudo ln --symbolic $REPO_DIR/apps/docker-compose /usr/local/bin/docker-compose
 # ------------------------------------------------------------------------------
 
 mkdir --parents ~/.var/app/org.inkscape.Inkscape/config/inkscape/templates/
-ln --symbolic $REPO_DIR/configs/inkscape-default.svg ~/.var/app/org.inkscape.Inkscape/config/inkscape/templates/default.svg
+ln --symbolic $DOTFILES_DIR/configs/inkscape-default.svg ~/.var/app/org.inkscape.Inkscape/config/inkscape/templates/default.svg
 
 
 # ------------------------------------------------------------------------------
@@ -194,7 +187,7 @@ mkdir --parents $FONTS_DIR
 
 # Disable USB peripheral wakeup
 
-sudo cp $REPO_DIR/services/disable-usb-wakeup.service /lib/systemd/system/disable-usb-wakeup.service
+sudo cp $DOTFILES_DIR/services/disable-usb-wakeup.service /lib/systemd/system/disable-usb-wakeup.service
 systemctl enable disable-usb-wakeup.service
 systemctl start disable-usb-wakeup.service
 
