@@ -48,18 +48,28 @@ mkdir "$ZSH/completions"
 # https://starship.rs/
 
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-ln --symbolic $REPO_DIR/configs/starship.toml ~/.config/starship.toml
+
+
+# ------------------------------------------------------------------------------
+# mise
+# ------------------------------------------------------------------------------
+
+# https://mise.jdx.dev/
+
+curl https://mise.run | sh
+
+# https://mise.jdx.dev/cli/completion.html
+mise completion zsh > "$ZSH/completions/_mise"
+
+# Necessary for completions
+mise use --global usage
 
 
 # ------------------------------------------------------------------------------
 # Node.js
 # ------------------------------------------------------------------------------
 
-# https://github.com/nvm-sh/nvm/blob/master/README.md
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-
-nvm install
+mise use --global node
 
 # npm saves auth tokens to the config file, so this can’t be linked.
 cp $REPO_DIR/configs/.npmrc ~/.npmrc
