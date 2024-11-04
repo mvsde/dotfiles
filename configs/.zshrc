@@ -40,6 +40,7 @@ source "$ZSH/oh-my-zsh.sh"
 
 export LANG="en_US.UTF-8"
 export EDITOR="code --wait"
+export NODE_COMPILE_CACHE="$HOME/.cache/node/compile-cache"
 
 # Telemetry
 
