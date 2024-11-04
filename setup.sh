@@ -105,6 +105,7 @@ flatpak install flathub io.gitlab.liferooter.TextPieces
 flatpak install flathub io.gitlab.theevilskeleton.Upscaler
 flatpak install flathub io.missioncenter.MissionCenter
 flatpak install flathub it.mijorus.smile
+flatpak install flathub me.iepure.devtoolbox
 flatpak install flathub org.gimp.GIMP
 flatpak install flathub org.gnome.design.Contrast
 flatpak install flathub org.gnome.Epiphany
