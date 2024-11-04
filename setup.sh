@@ -65,6 +65,10 @@ mise completion zsh > "$ZSH/completions/_mise"
 # Necessary for completions
 mise use --global usage
 
+# Husky support
+mkdir --parents ~/.config/husky
+ln --symbolic $DOTFILES_DIR/configs/husky.sh ~/.config/husky/init.sh
+
 
 # ------------------------------------------------------------------------------
 # Node.js
