@@ -7,6 +7,21 @@ FONTS_DIR=~/.local/share/fonts
 
 
 # ------------------------------------------------------------------------------
+# Ghostty
+# ------------------------------------------------------------------------------
+
+# https://ghostty.org/docs/install/binary#fedora
+
+dnf copr enable pgdev/ghostty
+dnf install ghostty
+
+# https://ghostty.org/docs/config
+
+mkdir --parents ~/.config/ghostty/
+ln --symbolic $DOTFILES_DIR/configs/ghostty.ini ~/.config/ghostty/config
+
+
+# ------------------------------------------------------------------------------
 # Git
 # ------------------------------------------------------------------------------
 
