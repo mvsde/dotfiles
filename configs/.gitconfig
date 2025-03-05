@@ -18,9 +18,14 @@
 [branch]
 	sort = -committerdate
 
+[tag]
+	sort = version:refname
+
 [diff]
 	algorithm = histogram
-	colorMoved = default
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
 
 [commit]
 	gpgsign = true
@@ -29,6 +34,7 @@
 	date = iso
 
 [push]
+	default = simple
 	autoSetupRemote = true
 	followtags = true
 
@@ -38,8 +44,15 @@
 [merge]
 	conflictstyle = zdiff3
 
+[rebase]
+	updateRefs = true
+
 [rerere]
 	enabled = true
+	autoupdate = true
+
+[column]
+	ui = auto
 
 [help]
 	autocorrect = prompt
