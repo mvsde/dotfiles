@@ -116,8 +116,6 @@ flatpak install flathub com.github.jeromerobert.pdfarranger
 flatpak install flathub com.github.rafostar.Clapper
 flatpak install flathub com.mattermost.Desktop
 flatpak install flathub com.rafaelmardojai.SharePreview
-flatpak install flathub com.slack.Slack
-flatpak install flathub com.thincast.client
 flatpak install flathub fr.romainvigier.MetadataCleaner
 flatpak install flathub io.github.fabrialberio.pinapp
 flatpak install flathub io.gitlab.liferooter.TextPieces
@@ -138,6 +136,7 @@ flatpak install flathub org.inkscape.Inkscape
 flatpak install flathub org.mozilla.Thunderbird
 flatpak install flathub org.nickvision.tubeconverter
 flatpak install flathub org.signal.Signal
+flatpak install flathub page.tesk.Refine
 
 
 # ------------------------------------------------------------------------------
