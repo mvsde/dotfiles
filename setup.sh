@@ -109,14 +109,15 @@ sudo dnf install trash-cli
 # Flatpak
 # ------------------------------------------------------------------------------
 
+flatpak install flathub com.belmoussaoui.Decoder
 flatpak install flathub com.belmoussaoui.Obfuscate
 flatpak install flathub com.felipekinoshita.Wildcard
 flatpak install flathub com.github.finefindus.eyedropper
 flatpak install flathub com.github.jeromerobert.pdfarranger
-flatpak install flathub com.github.rafostar.Clapper
+flatpak install flathub com.github.PintaProject.Pinta
 flatpak install flathub com.mattermost.Desktop
 flatpak install flathub com.rafaelmardojai.SharePreview
-flatpak install flathub fr.romainvigier.MetadataCleaner
+flatpak install flathub de.capypara.FieldMonitor
 flatpak install flathub io.github.fabrialberio.pinapp
 flatpak install flathub io.gitlab.liferooter.TextPieces
 flatpak install flathub io.gitlab.theevilskeleton.Upscaler
@@ -124,6 +125,8 @@ flatpak install flathub io.missioncenter.MissionCenter
 flatpak install flathub it.mijorus.smile
 flatpak install flathub me.iepure.devtoolbox
 flatpak install flathub org.gimp.GIMP
+flatpak install flathub org.gnome.Boxes
+flatpak install flathub org.gnome.Decibels
 flatpak install flathub org.gnome.design.Contrast
 flatpak install flathub org.gnome.Epiphany
 flatpak install flathub org.gnome.Extensions
@@ -132,11 +135,14 @@ flatpak install flathub org.gnome.gitg
 flatpak install flathub org.gnome.gitlab.YaLTeR.Identity
 flatpak install flathub org.gnome.Papers
 flatpak install flathub org.gnome.seahorse.Application
+flatpak install flathub org.gnome.Showtime
 flatpak install flathub org.inkscape.Inkscape
 flatpak install flathub org.mozilla.Thunderbird
 flatpak install flathub org.nickvision.tubeconverter
+flatpak install flathub org.remmina.Remmina
 flatpak install flathub org.signal.Signal
 flatpak install flathub page.tesk.Refine
+flatpak install flathub us.zoom.Zoom
 
 
 # ------------------------------------------------------------------------------
