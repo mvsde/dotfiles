@@ -73,6 +73,7 @@ ln --symbolic $DOTFILES_DIR/configs/starship.toml ~/.config/starship.toml
 # https://mise.jdx.dev/
 
 curl https://mise.run | sh
+ln --symbolic $DOTFILES_DIR/configs/mise.toml ~/.config/mise/config.toml
 
 # https://mise.jdx.dev/cli/completion.html
 mise completion zsh > "$ZSH/completions/_mise"
