@@ -110,6 +110,7 @@ sudo dnf install trash-cli
 # Flatpak
 # ------------------------------------------------------------------------------
 
+flatpak install flathub be.alexandervanhee.gradia
 flatpak install flathub com.belmoussaoui.Decoder
 flatpak install flathub com.belmoussaoui.Obfuscate
 flatpak install flathub com.felipekinoshita.Wildcard
