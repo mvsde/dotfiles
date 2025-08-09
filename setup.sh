@@ -228,7 +228,7 @@ mkdir --parents $FONTS_DIR
 
 	# https://github.com/JetBrains/JetBrainsMono
 	git clone git@github.com:JetBrains/JetBrainsMono.git
-	ln --symbolic $APPS_DIR/JetBrainsMono/fonts/variable/*.ttf $FONTS_DIR
+	cp $APPS_DIR/JetBrainsMono/fonts/variable/*.ttf $FONTS_DIR
 )
 
 
