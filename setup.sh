@@ -111,14 +111,14 @@ sudo dnf install trash-cli
 # ------------------------------------------------------------------------------
 
 flatpak install flathub be.alexandervanhee.gradia
-flatpak install flathub com.belmoussaoui.Decoder
 flatpak install flathub com.belmoussaoui.Obfuscate
 flatpak install flathub com.felipekinoshita.Wildcard
 flatpak install flathub com.github.finefindus.eyedropper
+flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
 flatpak install flathub com.github.jeromerobert.pdfarranger
 flatpak install flathub com.github.PintaProject.Pinta
 flatpak install flathub com.mattermost.Desktop
-flatpak install flathub com.rafaelmardojai.SharePreview
+flatpak install flathub com.mattjakeman.ExtensionManager
 flatpak install flathub de.capypara.FieldMonitor
 flatpak install flathub io.github.fabrialberio.pinapp
 flatpak install flathub io.gitlab.liferooter.TextPieces
@@ -128,20 +128,15 @@ flatpak install flathub it.mijorus.smile
 flatpak install flathub me.iepure.devtoolbox
 flatpak install flathub org.gimp.GIMP
 flatpak install flathub org.gnome.Boxes
-flatpak install flathub org.gnome.Decibels
 flatpak install flathub org.gnome.design.Contrast
 flatpak install flathub org.gnome.Epiphany
-flatpak install flathub org.gnome.Extensions
 flatpak install flathub org.gnome.Geary
-flatpak install flathub org.gnome.gitg
 flatpak install flathub org.gnome.gitlab.YaLTeR.Identity
 flatpak install flathub org.gnome.Papers
 flatpak install flathub org.gnome.seahorse.Application
-flatpak install flathub org.gnome.Showtime
 flatpak install flathub org.inkscape.Inkscape
 flatpak install flathub org.mozilla.Thunderbird
 flatpak install flathub org.nickvision.tubeconverter
-flatpak install flathub org.remmina.Remmina
 flatpak install flathub org.signal.Signal
 flatpak install flathub page.tesk.Refine
 flatpak install flathub us.zoom.Zoom
@@ -225,10 +220,6 @@ mkdir --parents $FONTS_DIR
 
 (
 	cd "$APPS_DIR" || exit
-
-	# https://github.com/JetBrains/JetBrainsMono
-	git clone git@github.com:JetBrains/JetBrainsMono.git
-	cp $APPS_DIR/JetBrainsMono/fonts/variable/*.ttf $FONTS_DIR
 
 	# https://github.com/0xType/0xProto
 	git clone git@github.com:0xType/0xProto.git
